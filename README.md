@@ -40,3 +40,25 @@ plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesda
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+## Filtrando datos para observar sólo las plantas de Chile
+
+El código que voy a ejecutar ahora es para resolver lo que se plantea en
+esta [*clase*](https://www.youtube.com/watch?v=Q6Tbk1HaY4Y) con el
+sentido de observar sólo los datos de Chile y usando sólo las columnas
+para país (*country*), la especie (*binomial_name*) y la categoria de
+IUCN (*red_list_category*)
+
+``` r
+Chile <- plants %>% 
+  filter(country == "Chile") %>% 
+  select(binomial_name, country, red_list_category)
+
+Chile
+```
+
+    ## # A tibble: 2 × 3
+    ##   binomial_name           country red_list_category  
+    ##   <chr>                   <chr>   <chr>              
+    ## 1 Santalum fernandezianum Chile   Extinct            
+    ## 2 Sophora toromiro        Chile   Extinct in the Wild

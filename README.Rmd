@@ -25,3 +25,15 @@ Ahora voy a leer los datos con los que voy a trabajar:
 plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
 ```
 
+## Filtrando datos para observar sólo las plantas de Chile
+
+El código que voy a ejecutar ahora es para resolver lo que se plantea en esta [*clase*](https://www.youtube.com/watch?v=Q6Tbk1HaY4Y) con el sentido de observar sólo los datos de Chile y usando sólo las columnas para país (*country*), la especie (*binomial_name*) y la categoria de IUCN (*red_list_category*)
+
+```{r}
+Chile <- plants %>% 
+  filter(country == "Chile") %>% 
+  select(binomial_name, country, red_list_category)
+
+Chile
+```
+
