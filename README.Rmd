@@ -1,0 +1,13 @@
+---
+title: "Trabajo con Plantas Extintas"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introducción
+Este es un documento con el objetivo de explorar la identidad de plantas que se encuentran extinras en silvertría o totalmente extintas según la IUCN
+
+## Subtítulo
